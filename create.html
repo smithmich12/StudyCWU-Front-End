@@ -1,0 +1,177 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to studycwu.com!</title>
+</head>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<link href="includes/css/login.css" rel="stylesheet">
+
+<style>
+.navbg {
+  background-color: #A2163A;
+}
+
+.nav-link.active {
+  background-color: #A2163A !important;
+  color: white !important;
+}
+.nav-link {
+  color: #A2163A;
+}
+.nav-link:hover{
+  color: #CC0000;
+}
+
+.button {
+  color: white;
+  background-color: #A2163A;
+  margin-top: 16px;
+  float: right;
+}
+
+.button2 {
+  color: white;
+  background-color: #A2163A;
+  float: left;
+}
+
+.button:hover, .button2:hover {
+  background-color: #CC0000;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.closemodal {
+  color: #A2163A;
+  /*Stuff for browsers to fade*/
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+.closemodal:hover {
+  color: #CC0000;
+}
+
+</style>
+<body class="bg-light">
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbg">
+    <div class="container">
+     <a class="navbar-brand mb-0 h1" href="index.html">StudyCWU</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item ">
+           <a class="nav-link" href="loggedin.html">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link active" href="groups.html">Groups</a>
+         </li>
+
+
+       </ul>
+
+       <ul class="navbar-nav">
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome User</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item clickable" href="index.html">Logout</a>
+            <a class="dropdown-item clickable" href="profile.html">Profile</a>
+          </div>
+        </li>
+
+       </ul>
+
+     </div>
+   </div>
+ </nav>
+ <!-- END NAVBAR -->
+
+ <!-- MAIN PAGE -->
+ <main role="main">
+  <div class="container mt-3">
+      <form method="post" action="groups.html">
+
+        <div class="form-row">
+          <div class="form-group col-md-4 offset-md-2">
+            <label for="groupname">Group Name</label>
+            <input type="text" class="form-control" id="groupname" placeholder="Group Name" required>
+          </div>
+
+
+
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-1 offset-md-2">
+            <label for="classnumber">Class #</label>
+            <input type="number" min="101" max="599" class="form-control" id="classnumber" placeholder="Class" required>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="subject">Subject</label>
+            <select id="subject" class="form-control" required>
+              <option selected disabled hidden value=''>Choose...</option>
+              <option value=''>Subject 1</option>
+              <option value=''>Subject 2</option>
+              <option value=''>Subject 3</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="professor">Professor</label>
+            <input type="text" class="form-control" id="professor" placeholder="Professor (optional)" name="professor">
+          </div>
+        </div>
+
+
+
+        <div class="form-row">
+          <div class="form-group col-md-3 offset-md-2">
+            <label for="subject">Location</label>
+            <select id="subject" class="form-control" required>
+              <option selected disabled hidden value=''>Choose...</option>
+              <option value='Hebeler+Hall'>Hebeler Hall</option>
+              <option value=''>Subject 2</option>
+              <option value=''>Subject 3</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="classnumber">Date and Time</label>
+            <input type="datetime-local"  class="form-control" id="datetime" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-8 offset-md-2">
+            <label for="description">Group Description</label>
+            <textarea class="form-control" id="description" name="description" placeholder="Enter group description here..." required></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-8 offset-md-2">
+            <button type="submit" class="btn button2">Submit Group</button>
+          </div>
+        </div>
+
+      </form>
+  </div>
+ </main>
+</body>
+</html>

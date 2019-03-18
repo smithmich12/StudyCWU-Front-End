@@ -1,0 +1,227 @@
+<!-- <img src="http://via.placeholder.com/350x150"> -->
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to studycwu.com!</title>
+</head>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<link href="includes/css/login.css" rel="stylesheet">
+
+<style>
+h2 {
+  font-weight: normal;
+}
+.main {
+  margin-top: 10px;
+}
+
+.slogan {
+  font-size: 3rem;
+}
+
+.navbg {
+  background-color: #A2163A;
+}
+
+.nav-link.active {
+  background-color: #A2163A !important;
+  color: white !important;
+}
+.nav-link {
+  color: #A2163A;
+}
+.nav-link:hover{
+  color: #CC0000;
+}
+
+.button {
+  color: white;
+  background-color: #A2163A;
+  margin-top: 16px;
+  float: right;
+}
+
+.button2 {
+  color: white;
+  background-color: #A2163A;
+  float: right;
+}
+
+.button:hover, .button2:hover {
+  background-color: #CC0000;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.closemodal {
+  color: #A2163A;
+  /*Stuff for browsers to fade*/
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+.closemodal:hover {
+  color: #CC0000;
+}
+
+.activity {
+  height: 150px;
+  overflow-y: auto;
+}
+
+#scroll::-webkit-scrollbar {
+  width: 8px;
+  background-color: #d9dadb;
+  border-radius: 8px;
+}
+
+#scroll::-webkit-scrollbar-thumb{
+  background-color: #A2163A;
+  border-radius: 8px;
+}
+
+.profilepic {
+  border: 4px solid #A2163A;
+  border-radius: 50%;
+
+}
+
+</style>
+<body class="bg-light">
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbg">
+    <div class="container">
+     <a class="navbar-brand mb-0 h1" href="index.html">StudyCWU</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item ">
+           <a class="nav-link active" href="loggedin.html">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="groups.html">Groups</a>
+         </li>
+
+
+       </ul>
+
+       <ul class="navbar-nav">
+
+
+           <li class="nav-item">
+             <a class="nav-link" href="create.html"><i class="fas fa-plus-circle"></i> Create Group</a>
+           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome, User</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item clickable" href="index.html">Logout</a>
+              <a class="dropdown-item clickable" href="profile.html">Profile</a>
+            </div>
+          </li>
+       </ul>
+
+     </div>
+   </div>
+ </nav>
+ <!-- END NAVBAR -->
+
+ <!-- MAIN PAGE -->
+ <main role="main">
+  <div class="container mt-3">
+  <div class="row">
+  <div class="col-md-4 mx-auto pb-3">
+    <div class="text-center">
+      <h2>Username</h2>
+      <img src="http://via.placeholder.com/200x200" class="profilepic">
+    </div>
+  </div>
+  <div class="col-md-6 offset-md-2">
+    <h2> About Me </h2><br>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget arcu quam. Vestibulum sollicitudin accumsan quam, vitae dapibus nunc aliquam ac. Donec egestas quam non posuere rhoncus. Nulla ultricies justo lorem, id tempus metus maximus rhoncus. Mauris volutpat posuere sapien, et porttitor massa viverra quis. Quisque fringilla ante aliquam dui finibus, vel tincidunt turpis pulvinar. Mauris mollis, erat a dignissim vulputate, libero est imperdiet magna, a egestas dui purus vel nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+  <h2>Major: <span class="font-weight-light"> Computer Science </h2><br>
+  <p></p>
+  <h2> Contact </h2><br>
+  <ul class="list-group list-group-flush ">
+    <li class="list-group-item bg-light"><span class="font-weight-bold">Name:</span> <span>John Doe</span></li>
+    <li class="list-group-item bg-light"><span class="font-weight-bold">CWU Email:</span> <span>doej@cwu.edu</span></li>
+    <li class="list-group-item bg-light"><span class="font-weight-bold">Phone Number:</span> <span>509-***-****</span></li>
+  </ul>
+</div>
+<div class="col-md-6">
+  <h2> Current Classes </h2><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Course Number</th>
+        <th scope="col">Course Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Math 330</td>
+        <td>Discrete Math</td>
+      </tr>
+      <tr>
+        <td>CS 380</td>
+        <td>Intro to Software Engineering</td>
+      </tr>
+      <tr>
+        <td>CS 420</td>
+        <td>Databases</td>
+      </tr>
+      <tr>
+        <td>CS 325</td>
+        <td>Technical Writing</td>
+      </tr>
+      <tr>
+        <td>CS 480</td>
+        <td>Advanced Software Engineering</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="col order-first">
+    <h2>Your Recent Activity</h2><br>
+    <ul class="list-group list-group-flush activity" id="scroll">
+      <li class="list-group-item bg-light"><span class="font-weight-bold">Username</span> created <span class="font-weight-bold">CS480 Midterm Group</span></li>
+      <li class="list-group-item bg-light"><span class="font-weight-bold">Username</span> joined <span class="font-weight-bold">Group 1</span></li>
+      <li class="list-group-item bg-light"><span class="font-weight-bold">Username</span> created <span class="font-weight-bold">Group 6</span></li>
+      <li class="list-group-item bg-light"><span class="font-weight-bold">Username</span> joined <span class="font-weight-bold">Group 4</span></li>
+      <li class="list-group-item bg-light"><span class="font-weight-bold">Username</span> commented in <span class="font-weight-bold">Group 3</span></li>
+      <li class="list-group-item bg-light"><span class="font-weight-bold">Username</span> created <span class="font-weight-bold">CS480 Midterm Group</span></li>
+      <li class="list-group-item bg-light"><span class="font-weight-bold">Username</span> commented in <span class="font-weight-bold">Group 1</span></li>
+    </ul>
+  </div>
+
+
+  </div>
+ </main>
+
+
+<!-- MODALS -->
+
+
+
+
+</body>
+</html>
